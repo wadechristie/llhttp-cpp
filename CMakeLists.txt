@@ -99,7 +99,7 @@ SET(LLHTTP_CPP_INC
 add_library(llhttp-cpp ${LLHTTP_CPP_INC} ${LLHTTP_CPP_SRC})
 add_library(llhttp-cpp::llhttp-cpp ALIAS llhttp-cpp)
 target_compile_features(llhttp-cpp PUBLIC cxx_std_17)
-target_compile_options(llhttp-cpp PRIVATE -Wall -Werror)
+target_compile_options(llhttp-cpp PRIVATE -Wall -Werror -fPIC)
 target_link_libraries(llhttp-cpp PUBLIC llhttp_static)
 
 target_include_directories(llhttp-cpp
